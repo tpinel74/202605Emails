@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Mom Deserves More Than Brunch</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    body { margin: 0; padding: 0; background-color: #f0f2f5; }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f0f2f5;
+      padding: 24px 0;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .hero-image {
+      width: 100%;
+      display: block;
+      line-height: 1;
+    }
+
+    /* Nav bar */
+    .nav-bar {
+      background-color: #1C3A6E;
+      padding: 12px 24px;
+      text-align: center;
+    }
+    .nav-bar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin: 0 12px;
+      display: inline-block;
+    }
+
+    /* Promo banner */
+    .promo-banner {
+      background-color: #111111;
+      padding: 14px 24px;
+      text-align: center;
+    }
+    .promo-banner-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #E8A020;
+      margin: 0;
+    }
+    .promo-banner-sub {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin: 3px 0 0;
+      letter-spacing: 0.5px;
+    }
+
+    /* Headline block */
+    .headline-block {
+      padding: 36px 48px 24px;
+      background-color: #ffffff;
+    }
+    .headline-eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #E8A020;
+      margin: 0 0 10px 0;
+    }
+    .headline-main {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 32px;
+      font-weight: bold;
+      color: #1C3A6E;
+      line-height: 1.15;
+      margin: 0 0 14px 0;
+    }
+    .headline-sub {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #555555;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Body section */
+    .body-section {
+      padding: 0 48px 28px;
+      background-color: #ffffff;
+    }
+    .body-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: #333333;
+      margin: 0 0 20px 0;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 8px 0 28px;
+    }
+
+    /* Offer intro */
+    .offer-intro {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 19px;
+      color: #1C3A6E;
+      line-height: 1.4;
+      margin: 0 0 24px 0;
+      font-weight: bold;
+    }
+
+    /* Perk cards */
+    .perk-card {
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border: 1px solid #e2e6ea;
+    }
+    .perk-image {
+      width: 100%;
+      display: block;
+      max-height: 220px;
+      object-fit: cover;
+    }
+    .perk-content {
+      padding: 18px 20px;
+    }
+    .perk-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #E8A020;
+      margin: 0 0 5px 0;
+    }
+    .perk-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #1C3A6E;
+      margin: 0 0 6px 0;
+      line-height: 1.2;
+    }
+    .perk-desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #555555;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .perk-card.dogpark .perk-content { border-left: 4px solid #E8A020; }
+    .perk-card.kidspace .perk-content { border-left: 4px solid #3A7D3A; }
+
+    /* Or divider */
+    .or-divider {
+      text-align: center;
+      position: relative;
+      margin: 4px 0;
+    }
+    .or-divider span {
+      display: inline-block;
+      background-color: #ffffff;
+      padding: 0 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #999999;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .or-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #e2e6ea;
+    }
+
+    /* Value add */
+    .value-add {
+      background-color: #F4F6F8;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .value-add p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #444444;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .value-add strong {
+      color: #1C3A6E;
+    }
+
+    /* Urgency line */
+    .urgency-line {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.6;
+      margin: 0 0 28px 0;
+    }
+    .urgency-line strong {
+      color: #c0392b;
+    }
+
+    /* CTA */
+    .cta-wrapper {
+      text-align: center;
+      padding: 4px 0 32px;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #E8A020;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 16px 44px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    /* Fine print */
+    .fine-print {
+      padding: 0 48px 32px;
+    }
+    .fine-print p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: #999999;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .fine-print-divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 0 48px 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #1C3A6E;
+      padding: 28px 48px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+    }
+    .footer-address {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #a0b4cc;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
+    }
+    .footer-links a {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #a0b4cc;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer-unsubscribe {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: #6a84a0;
+      line-height: 1.5;
+      margin: 12px 0 0;
+    }
+    .footer-unsubscribe a {
+      color: #6a84a0;
+      text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 620px) {
+      .email-wrapper { padding: 0 !important; }
+      .email-container { border-radius: 0 !important; box-shadow: none !important; }
+      .headline-block { padding: 28px 24px 20px !important; }
+      .headline-main { font-size: 26px !important; }
+      .body-section { padding: 0 24px 24px !important; }
+      .body-text { font-size: 15px !important; }
+      .offer-intro { font-size: 17px !important; }
+      .cta-button { padding: 15px 28px !important; font-size: 15px !important; display: block !important; }
+      .fine-print { padding: 0 24px 24px !important; }
+      .fine-print-divider { margin: 0 24px 20px !important; }
+      .footer { padding: 24px !important; }
+      .nav-bar a { margin: 0 6px !important; font-size: 12px !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrapper">
+  <table class="email-container" width="600" cellpadding="0" cellspacing="0" role="presentation" align="center">
+
+    <!-- Hero -->
+    <tr>
+      <td>
+        <img src="https://columbiaassociation.org/wp-content/uploads/LP_May_MOM_3840x750.jpg"
+             alt="Moms run this - yoga, aqua cycling, golf"
+             class="hero-image" width="600" />
+      </td>
+    </tr>
+
+    <!-- Nav -->
+    <tr>
+      <td class="nav-bar">
+        <a href="https://columbiaassociation.org/members-memberships/">Memberships</a>
+        <a href="https://columbiaassociation.org/programs-services/">Programs</a>
+        <a href="https://columbiaassociation.org/events/">Events</a>
+        <a href="https://columbiaassociation.org/take-a-tour/">Take a Tour</a>
+      </td>
+    </tr>
+
+    <!-- Promo banner -->
+    <tr>
+      <td class="promo-banner">
+        <p class="promo-banner-text">Mother's Day Offer &bull; May 7&ndash;11 Only</p>
+        <p class="promo-banner-sub">Free KidSpace or DogPark with annual membership</p>
+      </td>
+    </tr>
+
+    <!-- Headline -->
+    <tr>
+      <td class="headline-block">
+        <p class="headline-eyebrow">This Mother's Day</p>
+        <h1 class="headline-main">Moms Run This.</h1>
+        <p class="headline-sub">This year, give her something that gives back &mdash; a place that's actually hers.</p>
+      </td>
+    </tr>
+
+    <!-- Body -->
+    <tr>
+      <td class="body-section">
+        <p class="body-text">
+          She keeps the schedule. Remembers the appointments. Walks the dog.
+          Runs the household. And somehow still shows up for everyone else first.
+        </p>
+        <p class="body-text">
+          This Mother's Day, Columbia Association has something built for her.
+        </p>
+
+        <hr class="divider">
+
+        <p class="offer-intro">Join an annual 1Fit or Fit&amp;Play membership by Monday, May 11 and choose her perk:</p>
+
+        <!-- DogPark card -->
+        <div class="perk-card dogpark">
+          <img src="https://columbiaassociation.org/wp-content/uploads/Meta_Ad_Sets_Mom_Gen_3.jpg"
+               alt="Dog running at Columbia DogPark"
+               class="perk-image" width="600" />
+          <div class="perk-content">
+            <p class="perk-label">For the dog moms</p>
+            <p class="perk-title">A FREE year of Columbia DogPark access</p>
+            <p class="perk-desc">Because dog moms deserve a little off-leash time of their own.</p>
+          </div>
+        </div>
+
+        <div class="or-divider"><span>or</span></div>
+
+        <!-- KidSpace card -->
+        <div class="perk-card kidspace">
+          <img src="https://columbiaassociation.org/wp-content/uploads/Meta_Ad_Sets_Mom_Gen2.jpg"
+               alt="Kid climbing wall at KidSpace"
+               class="perk-image" width="600" />
+          <div class="perk-content">
+            <p class="perk-label">For the moms who need their workout time</p>
+            <p class="perk-title">A FREE year of KidSpace</p>
+            <p class="perk-desc">Supervised activities for the kids so she can actually focus on herself for a change.</p>
+          </div>
+        </div>
+
+        <!-- Value add -->
+        <div class="value-add">
+          <p><strong>Plus:</strong> As with any annual CA membership, her first month is on us. More time. More value. More her.</p>
+        </div>
+
+        <p class="urgency-line">
+          This offer is only available through <strong>Monday, May 11</strong> &mdash;
+          so don't wait until Sunday to make it happen.
+        </p>
+
+        <!-- CTA -->
+        <div class="cta-wrapper">
+          <a href="[MOTHERS_DAY_LANDING_PAGE_URL]" class="cta-button">Claim Her Gift</a>
+        </div>
+
+      </td>
+    </tr>
+
+    <!-- Fine print -->
+    <tr><td class="fine-print-divider"></td></tr>
+    <tr>
+      <td class="fine-print">
+        <p>Free KidSpace or Columbia DogPark membership included with new annual 1Fit or Fit&amp;Play membership purchased May 7&ndash;11, 2026. Offer valid for new members only. Annual membership required. First month free reflects pricing difference between annual and month-to-month membership rates.</p>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td class="footer">
+        <p class="footer-logo">Columbia Association</p>
+        <p class="footer-address">
+          6310 Hillside Court, Suite 100<br>
+          Columbia, MD 21046<br>
+          410-715-3000
+        </p>
+        <div class="footer-links">
+          <a href="https://columbiaassociation.org">columbiaassociation.org</a>
+          <a href="https://columbiaassociation.org/privacy-policy/">Privacy Policy</a>
+          <a href="https://columbiaassociation.org/terms-of-use/">Terms of Use</a>
+        </div>
+        <p class="footer-unsubscribe">
+          You're receiving this email because you expressed interest in Columbia Association membership.<br>
+          <a href="[unsubscribe_link]">Unsubscribe</a> &bull; <a href="[preferences_link]">Update preferences</a>
+        </p>
+      </td>
+    </tr>
+
+  </table>
+</div>
+</body>
+</html>
