@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May 2026 Email Previews — Columbia Association</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1C3A6E;
+      --navy-light: #2a4e8c;
+      --green: #3A7D3A;
+      --gold: #E8A020;
+      --gray-bg: #F4F6F8;
+      --gray-border: #e2e6ea;
+      --gray-text: #6b7280;
+      --text: #1a1a2e;
+    }
+
+    body {
+      background-color: var(--gray-bg);
+      color: var(--text);
+      font-family: 'DM Sans', Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: var(--navy);
+      padding: 0 40px;
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 0 24px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .header-logo {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .header-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 32px;
+      color: #ffffff;
+      line-height: 1.1;
+      font-weight: 400;
+    }
+    .header-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .header-meta {
+      text-align: right;
+    }
+    .header-badge {
+      display: inline-block;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.3px;
+    }
+    .header-note {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 8px;
+    }
+
+    /* Phase labels */
+    .phase-strip {
+      background-color: var(--green);
+      padding: 0 40px;
+    }
+    .phase-strip-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 9px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .phase-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.6);
+      flex-shrink: 0;
+    }
+    .phase-strip-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* Main content */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 40px 80px;
+    }
+
+    /* Phase section */
+    .phase-section {
+      margin-bottom: 48px;
+    }
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .phase-label {
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray-text);
+    }
+    .phase-rule {
+      flex: 1;
+      height: 1px;
+      background-color: var(--gray-border);
+    }
+
+    /* Email cards */
+    .card {
+      background-color: #ffffff;
+      border: 1px solid var(--gray-border);
+      border-radius: 6px;
+      margin-bottom: 12px;
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+      overflow: hidden;
+    }
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(28, 58, 110, 0.10);
+      transform: translateY(-1px);
+    }
+    .card-inner {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* Date column */
+    .card-date {
+      padding: 20px 16px;
+      text-align: center;
+      border-right: 1px solid var(--gray-border);
+      background-color: #fafbfc;
+    }
+    .card-date-day {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 28px;
+      color: var(--navy);
+      line-height: 1;
+      display: block;
+    }
+    .card-date-month {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      display: block;
+      margin-top: 3px;
+    }
+
+    /* Content column */
+    .card-content {
+      padding: 18px 24px;
+    }
+    .card-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .card-type.email { color: var(--navy); }
+    .card-type.text-msg { color: var(--green); }
+    .card-type-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+    .card-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 18px;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+    .card-subject {
+      font-size: 13px;
+      color: var(--gray-text);
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+    .card-subject strong {
+      font-style: normal;
+      font-weight: 600;
+      color: #4a5568;
+    }
+    .card-description {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.5;
+    }
+
+    /* Action column */
+    .card-action {
+      padding: 20px 24px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .preview-link {
+      display: inline-block;
+      background-color: var(--navy);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 9px 18px;
+      border-radius: 4px;
+      white-space: nowrap;
+      transition: background-color 0.15s ease;
+    }
+    .preview-link:hover {
+      background-color: var(--navy-light);
+    }
+    .preview-link.disabled {
+      background-color: #e2e6ea;
+      color: #9ca3af;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* Status pills */
+    .status-pill {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+    .status-ready { background-color: #d5f5e3; color: #1e8449; }
+    .status-blocked { background-color: #fadbd8; color: #c0392b; }
+    .status-draft { background-color: #fef9e7; color: #d68910; }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--navy);
+      padding: 20px 40px;
+      text-align: center;
+    }
+    .site-footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 640px) {
+      .site-header, .phase-strip { padding: 0 20px; }
+      .main { padding: 24px 20px 60px; }
+      .header-title { font-size: 24px; }
+      .header-meta { display: none; }
+      .card-inner { grid-template-columns: 64px 1fr; }
+      .card-action { display: none; }
+      .card-title { font-size: 16px; }
+      .card-content { padding: 14px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <p class="header-logo">Columbia Association &mdash; Membership Acquisition</p>
+      <h1 class="header-title">May 2026 <em>Email Previews</em></h1>
+    </div>
+    <div class="header-meta">
+      <span class="header-badge">Internal Review Only</span>
+      <p class="header-note">For Michelle &mdash; updated as drafts are completed</p>
+    </div>
+  </div>
+</header>
+
+<div class="phase-strip">
+  <div class="phase-strip-inner">
+    <div class="phase-dot"></div>
+    <p class="phase-strip-text">3 campaign phases &bull; 8 email sends &bull; Engage Pro deployment &bull; May 1 &ndash; May 31</p>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- Phase 1 -->
+  <section class="phase-section">
+    <div class="phase-header">
+      <span class="phase-label">Phase 1 &mdash; Countdown to Summer</span>
+      <div class="phase-rule"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">1</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Countdown to Summer &mdash; Campaign Launch</p>
+          <p class="card-subject"><strong>Subject:</strong> Summer's waiting. Want a look?</p>
+          <p class="card-description">Awareness email. Resets tone after April's price-urgency push. Leads with the breadth of CA summer. Primary CTA is a free 45-minute tour with a Member Advocate.</p>
+          <span class="status-pill status-ready">Ready for review</span>
+        </div>
+        <div class="card-action">
+          <a href="may1-countdown.html" class="preview-link">Preview &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase 2 -->
+  <section class="phase-section">
+    <div class="phase-header">
+      <span class="phase-label">Phase 2 &mdash; Mother's Day Promotion &bull; May 7&ndash;11</span>
+      <div class="phase-rule"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">7</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Mother's Day &mdash; Promotion Launch</p>
+          <p class="card-subject"><strong>Subject:</strong> TBD</p>
+          <p class="card-description">Campaign launch email. Gift angle. Offer: free KidSpace for a year OR free annual DogPark membership with annual 1Fit or Fit&amp;Play membership. Runs through May 11.</p>
+          <span class="status-pill status-blocked">Blocked &mdash; offer approval pending</span>
+        </div>
+        <div class="card-action">
+          <a class="preview-link disabled">Coming soon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">9</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Mother's Day &mdash; Last Chance</p>
+          <p class="card-subject"><strong>Subject:</strong> TBD</p>
+          <p class="card-description">Urgency send. Offer expires May 11. Drives final conversions before the Mother's Day flash sale closes.</p>
+          <span class="status-pill status-blocked">Blocked &mdash; offer approval pending</span>
+        </div>
+        <div class="card-action">
+          <a class="preview-link disabled">Coming soon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase 3 -->
+  <section class="phase-section">
+    <div class="phase-header">
+      <span class="phase-label">Phase 3 &mdash; Memorial Day / Summer Closeout &bull; May 20&ndash;31</span>
+      <div class="phase-rule"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">20</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Pool Countdown &mdash; Memorial Day Launch</p>
+          <p class="card-subject"><strong>Subject:</strong> TBD</p>
+          <p class="card-description">Warm-up send ahead of Memorial Day promo launch. Builds anticipation around pool season opening and the summer offer.</p>
+          <span class="status-pill status-blocked">Blocked &mdash; offer approval pending</span>
+        </div>
+        <div class="card-action">
+          <a class="preview-link disabled">Coming soon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">22</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Pools Open &mdash; Seasonal Launch</p>
+          <p class="card-subject"><strong>Subject:</strong> TBD</p>
+          <p class="card-description">Pools open email. Seasonal excitement, lifestyle tone. Highlights pool season features and ties back to membership offer.</p>
+          <span class="status-pill status-blocked">Blocked &mdash; offer approval pending</span>
+        </div>
+        <div class="card-action">
+          <a class="preview-link disabled">Coming soon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">27</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Midweek Push &mdash; 4 Days Left</p>
+          <p class="card-subject"><strong>Subject:</strong> TBD</p>
+          <p class="card-description">Urgency build. Reinforces offer benefits, drives action. 4 days remaining before Memorial Day promotion closes May 31.</p>
+          <span class="status-pill status-blocked">Blocked &mdash; offer approval pending</span>
+        </div>
+        <div class="card-action">
+          <a class="preview-link disabled">Coming soon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">29</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Countdown &mdash; 2 Days Left</p>
+          <p class="card-subject"><strong>Subject:</strong> TBD</p>
+          <p class="card-description">Final urgency push. 2 days to act. Reinforces community and value framing. Strong CTA before the last-call send.</p>
+          <span class="status-pill status-blocked">Blocked &mdash; offer approval pending</span>
+        </div>
+        <div class="card-action">
+          <a class="preview-link disabled">Coming soon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-date">
+          <span class="card-date-day">31</span>
+          <span class="card-date-month">May</span>
+        </div>
+        <div class="card-content">
+          <div class="card-type email"><span class="card-type-dot"></span> Email</div>
+          <p class="card-title">Final Call &mdash; Offer Ends Tonight</p>
+          <p class="card-subject"><strong>Subject:</strong> TBD</p>
+          <p class="card-description">Last-chance email. Clear deadline messaging. Offer closes tonight. Maximum urgency, minimum friction to convert.</p>
+          <span class="status-pill status-blocked">Blocked &mdash; offer approval pending</span>
+        </div>
+        <div class="card-action">
+          <a class="preview-link disabled">Coming soon</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Columbia Association &mdash; Membership Acquisition &bull; May 2026 Campaign &bull; Internal use only</p>
+</footer>
+
+</body>
+</html>
