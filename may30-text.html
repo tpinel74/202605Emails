@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Preview - May 30 - Last Chance Tomorrow</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #f0f2f5; font-family: Arial, Helvetica, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 40px 20px; }
+    .back-link { align-self: flex-start; margin-bottom: 24px; }
+    .back-link a { font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #1C3A6E; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+    .back-link a::before { content: '←'; }
+    .preview-label { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #999999; margin-bottom: 20px; text-align: center; }
+    .phone-frame { width: 320px; background-color: #1a1a1a; border-radius: 40px; padding: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    .phone-notch { width: 100px; height: 24px; background-color: #1a1a1a; border-radius: 0 0 16px 16px; margin: 0 auto 8px; }
+    .phone-screen { background-color: #f2f2f7; border-radius: 28px; overflow: hidden; min-height: 480px; display: flex; flex-direction: column; }
+    .status-bar { background-color: #f2f2f7; padding: 10px 20px 4px; display: flex; justify-content: space-between; align-items: center; }
+    .status-time { font-size: 13px; font-weight: 700; color: #000000; }
+    .status-icons { font-size: 11px; color: #000000; letter-spacing: 1px; }
+    .msg-header { background-color: #f2f2f7; padding: 8px 16px 12px; text-align: center; border-bottom: 1px solid #e0e0e0; }
+    .msg-sender { font-size: 13px; font-weight: 600; color: #000000; }
+    .msg-sender-sub { font-size: 11px; color: #888888; margin-top: 2px; }
+    .msg-body { flex: 1; padding: 16px 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; }
+    .msg-bubble { background-color: #e9e9eb; border-radius: 18px 18px 18px 4px; padding: 10px 14px; max-width: 85%; align-self: flex-start; }
+    .msg-bubble-text { font-size: 14px; color: #000000; line-height: 1.4; }
+    .msg-bubble-text a { color: #007AFF; text-decoration: none; }
+    .msg-time { font-size: 10px; color: #888888; margin-top: 4px; padding-left: 4px; }
+    .reply-bar { background-color: #f2f2f7; border-top: 1px solid #e0e0e0; padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+    .reply-input { flex: 1; background-color: #ffffff; border: 1px solid #c7c7cc; border-radius: 18px; padding: 7px 14px; font-size: 14px; color: #888888; }
+    .reply-send { width: 30px; height: 30px; background-color: #007AFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; flex-shrink: 0; }
+    .metadata-panel { margin-top: 32px; background-color: #ffffff; border-radius: 8px; padding: 20px 24px; width: 320px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .metadata-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #999999; margin-bottom: 14px; }
+    .metadata-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+    .metadata-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .metadata-key { font-size: 12px; font-weight: 600; color: #555555; flex-shrink: 0; }
+    .metadata-val { font-size: 12px; color: #333333; text-align: right; }
+    .metadata-val.channel-text { color: #3A7D3A; font-weight: 700; }
+    .phone-home-bar { width: 100px; height: 4px; background-color: #ffffff; border-radius: 2px; margin: 8px auto 4px; opacity: 0.3; }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to all emails</a></div>
+  <p class="preview-label">Text Message Preview &bull; May 30, 2026</p>
+
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar">
+        <span class="status-time">11:00 AM</span>
+        <span class="status-icons">&#9679;&#9679;&#9679; WiFi &#9641;</span>
+      </div>
+      <div class="msg-header">
+        <p class="msg-sender">Columbia Association</p>
+        <p class="msg-sender-sub">Marketing &bull; SMS</p>
+      </div>
+      <div class="msg-body">
+        <div class="msg-bubble">
+          <p class="msg-bubble-text">Tomorrow's your last chance. Join CA with $0 down, pick a free experience gift, and kick off your summer right. Offer closes Sunday, May 31. Join now: <a href="#">[URL]</a></p>
+        </div>
+        <p class="msg-time">11:00 AM</p>
+      </div>
+      <div class="reply-bar">
+        <div class="reply-input">Text Message</div>
+        <div class="reply-send">&#8593;</div>
+      </div>
+    </div>
+    <div class="phone-home-bar"></div>
+  </div>
+
+  <div class="metadata-panel">
+    <p class="metadata-title">Send Details</p>
+    <div class="metadata-row">
+      <span class="metadata-key">Date</span>
+      <span class="metadata-val">Saturday, May 30, 2026</span>
+    </div>
+    <div class="metadata-row">
+      <span class="metadata-key">Channel</span>
+      <span class="metadata-val channel-text">Text (SMS)</span>
+    </div>
+    <div class="metadata-row">
+      <span class="metadata-key">Platform</span>
+      <span class="metadata-val">Engage Pro</span>
+    </div>
+    <div class="metadata-row">
+      <span class="metadata-key">Focus</span>
+      <span class="metadata-val">Last chance tomorrow reminder</span>
+    </div>
+    <div class="metadata-row">
+      <span class="metadata-key">CTA</span>
+      <span class="metadata-val">Link to Memorial Day landing page</span>
+    </div>
+  </div>
+</body>
+</html>
