@@ -40,28 +40,11 @@
       line-height: 1;
     }
 
-    /* Nav */
-    .nav-bar {
-      background-color: #1C3A6E;
-      padding: 12px 24px;
-      text-align: center;
-    }
-    .nav-bar a {
-      color: #ffffff;
-      text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin: 0 12px;
-      display: inline-block;
-    }
-
     /* Urgency banner */
     .urgency-banner {
       background-color: #c0392b;
       padding: 14px 24px;
-      text-align: center;
+      text-align: left !important;
     }
     .urgency-banner-text {
       font-family: Arial, Helvetica, sans-serif;
@@ -71,12 +54,14 @@
       text-transform: uppercase;
       color: #ffffff;
       margin: 0;
+      text-align: left !important;
     }
 
     /* Headline block */
     .headline-block {
       padding: 36px 48px 8px;
       background-color: #ffffff;
+      text-align: left !important;
     }
     .headline-eyebrow {
       font-family: Arial, Helvetica, sans-serif;
@@ -86,6 +71,7 @@
       text-transform: uppercase;
       color: #c0392b;
       margin: 0 0 10px 0;
+      text-align: left !important;
     }
     .headline-main {
       font-family: Georgia, 'Times New Roman', serif;
@@ -94,6 +80,7 @@
       color: #1C3A6E;
       line-height: 1.15;
       margin: 0 0 14px 0;
+      text-align: left !important;
     }
     .headline-sub {
       font-family: Arial, Helvetica, sans-serif;
@@ -101,11 +88,13 @@
       color: #555555;
       line-height: 1.5;
       margin: 0;
+      text-align: left !important;
     }
 
     /* Body */
     .body-section {
       padding: 24px 48px 28px;
+      text-align: left !important;
     }
     .body-text {
       font-family: Arial, Helvetica, sans-serif;
@@ -113,6 +102,7 @@
       line-height: 1.65;
       color: #333333;
       margin: 0 0 20px 0;
+      text-align: left !important;
     }
 
     /* Offer summary box */
@@ -121,6 +111,7 @@
       border-radius: 4px;
       padding: 24px 28px;
       margin: 8px 0 24px;
+      text-align: left !important;
     }
     .offer-box-label {
       font-family: Arial, Helvetica, sans-serif;
@@ -130,6 +121,7 @@
       text-transform: uppercase;
       color: #E8A020;
       margin: 0 0 12px 0;
+      text-align: left !important;
     }
     .offer-box-item {
       display: block;
@@ -139,6 +131,7 @@
       line-height: 1.5;
       padding: 8px 0;
       border-bottom: 1px solid rgba(255,255,255,0.12);
+      text-align: left !important;
     }
     .offer-box-item:last-child {
       border-bottom: none;
@@ -153,9 +146,10 @@
       color: rgba(255,255,255,0.55);
       margin: 14px 0 0;
       line-height: 1.5;
+      text-align: left !important;
     }
 
-    /* Closing line */
+    /* Closing line - left aligned override */
     .closing-line {
       font-family: Georgia, 'Times New Roman', serif;
       font-size: 18px;
@@ -163,12 +157,12 @@
       color: #1C3A6E;
       line-height: 1.5;
       margin: 0 0 28px 0;
-      text-align: center;
+      text-align: left !important;
     }
 
-    /* CTA */
+    /* CTA - left aligned override */
     .cta-wrapper {
-      text-align: center;
+      text-align: left !important;
       padding: 0 0 8px;
     }
     .cta-button {
@@ -188,7 +182,7 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
       color: #999999;
-      text-align: center;
+      text-align: left !important;
       margin: 10px 0 0;
     }
 
@@ -200,6 +194,7 @@
     }
     .fine-print {
       padding: 0 48px 32px;
+      text-align: left !important;
     }
     .fine-print p {
       font-family: Arial, Helvetica, sans-serif;
@@ -207,45 +202,7 @@
       color: #999999;
       line-height: 1.6;
       margin: 0;
-    }
-
-    /* Footer */
-    .footer {
-      background-color: #1C3A6E;
-      padding: 28px 48px;
-      text-align: center;
-    }
-    .footer-logo {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 0 8px 0;
-    }
-    .footer-address {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      color: #a0b4cc;
-      line-height: 1.6;
-      margin: 0 0 16px 0;
-    }
-    .footer-links a {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      color: #a0b4cc;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-    .footer-unsubscribe {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 11px;
-      color: #6a84a0;
-      line-height: 1.5;
-      margin: 12px 0 0;
-    }
-    .footer-unsubscribe a {
-      color: #6a84a0;
-      text-decoration: underline;
+      text-align: left !important;
     }
 
     @media only screen and (max-width: 620px) {
@@ -259,8 +216,6 @@
       .cta-button { padding: 15px 28px !important; font-size: 15px !important; display: block !important; }
       .fine-print-divider { margin: 20px 24px 16px !important; }
       .fine-print { padding: 0 24px 24px !important; }
-      .footer { padding: 24px !important; }
-      .nav-bar a { margin: 0 6px !important; font-size: 12px !important; }
     }
   </style>
 </head>
@@ -274,16 +229,6 @@
         <img src="https://columbiaassociation.org/wp-content/uploads/Do-More_Web-Cal_850x630.png"
              alt="Moms Run This - Columbia Association Mother's Day offer"
              class="hero-image" width="600" />
-      </td>
-    </tr>
-
-    <!-- Nav -->
-    <tr>
-      <td class="nav-bar">
-        <a href="https://columbiaassociation.org/members-memberships/">Memberships</a>
-        <a href="https://columbiaassociation.org/programs-services/">Programs</a>
-        <a href="https://columbiaassociation.org/events/">Events</a>
-        <a href="https://columbiaassociation.org/take-a-tour/">Take a Tour</a>
       </td>
     </tr>
 
@@ -327,7 +272,19 @@
 
         <!-- CTA -->
         <div class="cta-wrapper">
-          <a href="[MOTHERS_DAY_LANDING_PAGE_URL]" class="cta-button">Claim This Offer Before Monday</a>
+          <!--[if mso]>
+          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+            href="https://columbiaassociation.org/lp-maymom/?utm_source=email&utm_medium=epemail&utm_campaign=maymom26"
+            style="height:52px;v-text-anchor:middle;width:280px;" arcsize="6%" stroke="f" fillcolor="#c0392b">
+            <w:anchorlock/>
+            <center style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;letter-spacing:0.5px;text-transform:uppercase;">
+              CLAIM THIS OFFER BEFORE MONDAY
+            </center>
+          </v:roundrect>
+          <![endif]-->
+          <!--[if !mso]><!-->
+          <a href="https://columbiaassociation.org/lp-maymom/?utm_source=email&utm_medium=epemail&utm_campaign=maymom26" class="cta-button">Claim This Offer Before Monday</a>
+          <!--<![endif]-->
           <p class="cta-subtext">Offer expires end of day Monday, May 11, 2026</p>
         </div>
 
@@ -338,28 +295,7 @@
     <tr><td><hr class="fine-print-divider"></td></tr>
     <tr>
       <td class="fine-print">
-        <p>Free KidSpace or Columbia DogPark membership included with new annual 1Fit or Fit&amp;Play membership purchased May 7&ndash;11, 2026. Offer valid for new members only. Annual membership required. First month free reflects pricing difference between annual and month-to-month membership rates.</p>
-      </td>
-    </tr>
-
-    <!-- Footer -->
-    <tr>
-      <td class="footer">
-        <p class="footer-logo">Columbia Association</p>
-        <p class="footer-address">
-          6310 Hillside Court, Suite 100<br>
-          Columbia, MD 21046<br>
-          410-715-3000
-        </p>
-        <div class="footer-links">
-          <a href="https://columbiaassociation.org">columbiaassociation.org</a>
-          <a href="https://columbiaassociation.org/privacy-policy/">Privacy Policy</a>
-          <a href="https://columbiaassociation.org/terms-of-use/">Terms of Use</a>
-        </div>
-        <p class="footer-unsubscribe">
-          You're receiving this email because you expressed interest in Columbia Association membership.<br>
-          <a href="[unsubscribe_link]">Unsubscribe</a> &bull; <a href="[preferences_link]">Update preferences</a>
-        </p>
+        <p>Free KidSpace or Columbia DogPark membership included with new annual 1Fit or Fit&amp;Play membership purchased May 7&ndash;11, 2026. Offer valid for new members only. Annual membership required. KidSpace available up to 2 hours per day per family. Columbia DogPark memberships are issued on a calendar-year basis; new members will receive a 2026 DogPark membership valid through December 31, 2026, plus a $25 credit toward a 2027 DogPark membership renewal. First month free reflects pricing difference between annual and month-to-month membership rates.</p>
       </td>
     </tr>
 
